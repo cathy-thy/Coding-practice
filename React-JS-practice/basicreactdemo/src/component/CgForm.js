@@ -4,11 +4,13 @@ export default class CgForm extends Component{
     constructor(props)
     {
         super(props);
-        this.state = {firstName:"", lastName:""}
+        this.state = {firstName:"", lastName:"", //textbox
+                        fullName:{"fname":"VH", "lname":"SO"}} //json object
     }
+    
     //----------------------------------
     handleChange = (event)=>{
-        if (event.target.name == "firstName")
+        if (event.target.name === "firstName")
         {
             this.setState({firstName:event.target.value})
         }
@@ -16,6 +18,19 @@ export default class CgForm extends Component{
         {
             this.setState({lastName:event.target.value})
         }
+    }
+
+    changeName = (event) =>{
+        /*
+        this.setState((prevState)=>(
+            {fullname:{...prevState.fullName,fname:"newFName", lastName:"nameLName"
+        }}));
+        */
+
+        this.setState((prevState)=>{return(
+            {fullname:{...prevState.fullName,fname:"newFName", lastName:"nameLName"
+        }})});
+
     }
     //----------------------------------
     render()
@@ -33,6 +48,8 @@ export default class CgForm extends Component{
                     onChange = {this.handleChange}/> 
                 <br/>
                 <p>FirstName:{this.state.firstName} - LastName:{this.state.lastName}</p>
+                <p>FirstName:{this.state.fullName.fname} - LastName:{this.state.fullName.lname}</p>
+                <button onClick={this.changeName}>ChangeName</button>
             </div>
         )
     }

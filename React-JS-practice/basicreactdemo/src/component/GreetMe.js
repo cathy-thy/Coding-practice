@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Login from "./Login.js"
+import LifeCycleA from "./LifeCycleA.js"
 
 export default class GreetMe extends Component
 {
@@ -69,6 +70,7 @@ export default class GreetMe extends Component
                 <h5>Emp List:</h5>
                 {newEmpList}
                 <Login/>
+                <LifeCycleA score="300"/>
             </div>
         )
     }

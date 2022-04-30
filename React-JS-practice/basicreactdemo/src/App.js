@@ -2,6 +2,8 @@ import './App.css';
 import Footer from "./component/Footer"
 import GreetMe from "./component/GreetMe"
 import Header from "./component/Header"
+import HooksDemo from "./component/HooksDemo"
+import MyRefDemo from "./component/MyRefDemo"
 
 function App() {
   let company = "AcctFighting"
@@ -10,7 +12,14 @@ function App() {
       <marquee><h5>Welcome To React practice</h5></marquee>
       <hr color="red" size="3"/>
       <Header compName = {company} countryName = "Hong Kong"/>
+      <hr/>
       <GreetMe/>
+      <hr/>
+      <p align="center">HooksDemo</p>
+      <HooksDemo/>
+      <hr/>
+      <p align="center">MyRefDemo</p>
+      <MyRefDemo/>
       <Footer compName={company}/>
     </div>
   );

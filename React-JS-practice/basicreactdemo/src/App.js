@@ -4,6 +4,8 @@ import GreetMe from "./component/GreetMe"
 import Header from "./component/Header"
 import HooksDemo from "./component/HooksDemo"
 import MyRefDemo from "./component/MyRefDemo"
+import ClickCounter from "./component/ClickCounter"
+import HoverCounter from "./component/HoverCounter"
 
 function App() {
   let company = "AcctFighting"
@@ -20,6 +22,8 @@ function App() {
       <hr/>
       <p align="center">MyRefDemo</p>
       <MyRefDemo/>
+      <ClickCounter/>
+      <HoverCounter/>
       <Footer compName={company}/>
     </div>
   );

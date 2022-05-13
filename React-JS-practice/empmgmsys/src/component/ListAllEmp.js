@@ -43,7 +43,7 @@ export default function ListAllEmp()
                                 <td>{emp.empSal}</td>
                                 <td>{emp.isMarried}</td>
                                 <td><button>DELETE</button></td>
-                                <td><Link to="/">UPDATE</Link></td>
+                                <td><Link to={`/ShowUpdatePage/${emp.id}`}>UPDATE</Link></td>
                             </tr>)
                         })
                     }

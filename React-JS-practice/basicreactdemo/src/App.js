@@ -6,9 +6,21 @@ import HooksDemo from "./component/HooksDemo"
 import MyRefDemo from "./component/MyRefDemo"
 import ClickCounter from "./component/ClickCounter"
 import HoverCounter from "./component/HoverCounter"
+import CompButton from "./component/CompButton"
 
 function App() {
   let company = "AcctFighting"
+
+  let btnStyle = {color:'grey', 
+                  backgroundColor:"Cyan",
+                  margin: "10px 10px 10px 10px"
+                }
+//---------------------------------------
+let compEvent=()=>{
+  //if people click the button, they receive the company name
+  alert(company);
+}
+//---------------------------------------
   return (
     <div className="App">
       <marquee><h5>Welcome To React practice</h5></marquee>
@@ -22,8 +34,17 @@ function App() {
       <hr/>
       <p align="center">MyRefDemo</p>
       <MyRefDemo/>
+      <hr/>
+      <p align="center">Click and Hover Counter</p>
       <ClickCounter/>
       <HoverCounter/>
+      <hr/>
+      <p align="center">Company Button</p>
+      <CompButton compButtonId="cg#1" 
+      compButtonClickHandler={compEvent}
+                  compButtonStyle={btnStyle}
+                  compButtonText={"AccountFighting"}
+                  />
       <Footer compName={company}/>
     </div>
   );

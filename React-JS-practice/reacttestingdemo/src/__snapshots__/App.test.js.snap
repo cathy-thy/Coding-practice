@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Snapshot for App Comp 1`] = `
+<div
+  className="App"
+>
+  <h2
+    data-testid="h2Id"
+  >
+    Welcome To CG
+  </h2>
+  <p>
+    Hello
+  </p>
+  <button
+    onClick={[Function]}
+    style={
+      Object {
+        "backgroundColor": "red",
+      }
+    }
+  >
+    Change To 
+    blue
+  </button>
+</div>
+`;

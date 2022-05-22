@@ -4,6 +4,7 @@ import {useState} from "react";
 function App() {
   //useState to change the color
   let [btnColor, setBtnColor] = useState("blue"); //initial blue
+  eval(10);
   let colorCode=()=>{
     if(btnColor==="blue"){
       return "red";

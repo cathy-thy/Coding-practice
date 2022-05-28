@@ -1,0 +1,20 @@
+<p>productlist works!</p>
+<app-productlistitem></app-productlistitem>
+<hr>
+
+<div class="container-sm">
+    <div class="row">
+        <div class=""col-lg-8>
+            <div class = "shadow-lg p-3 mb-5 bg-white rounded">
+                <h4>{{product.title}}</h4>
+            </div>
+            <span class = "align-middle">
+                <img 
+                [src]="product.imagepath" 
+                alt="{{product.title}}"
+                class = "img-fluid">
+            </span>
+        </div>
+    </div>
+
+</div>

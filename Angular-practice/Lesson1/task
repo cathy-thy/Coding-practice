@@ -1,0 +1,17 @@
+/*
+- Create a class employee (id, name, salary)
+- Define constructor(...), getDetails()
+- Create array of 5 employees
+- Write a function to display the employrr having salary >35000
+*/
+
+class employee 
+{
+    
+    constructor(id: number, name: string, salary: number)
+    {
+
+    }
+
+
+}

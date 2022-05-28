@@ -18,7 +18,7 @@ describe ("Test Suite to Test Summation Functionality", () => {
     });
 
     //--------Test 2--------
-    it.skipp("Test sum returns 0 + 0 = 0", ()=>{
+    test("Test sum returns 0 + 0 = 0", ()=>{
         expect(sum(0,0)).toBe(0);
     })
 

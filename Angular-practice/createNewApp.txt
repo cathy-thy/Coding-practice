@@ -1,0 +1,44 @@
+1. install angular by running following command in nodejs command prompt
+    npm install -g @angular/cli
+
+2. check the version on angular
+    ng --version
+
+3. run the following command for creating a project in desired directory
+    ng new <projectname>
+
+4. run the app, in the proj directory
+    ng serve -o
+
+5. to create component
+    - if done with command, it will be included in the app.module.ts automatically
+    ng generate component <componentname>
+    ng g c <componentname>
+
+6. install bootstrap
+    npm install --save bootstrap
+
+7. on demoapp > angular.json, 
+            "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css"
+            ],
+-----------------------------------------------------------
+
+Angular app by default contains 1 module. 
+Module is a container for services, components...
+
+demoapp > src > main.ts
+    - There is default AppModule
+
+demoapp > src > app.module.ts
+    - NgModule is a declarator that gives you meta data of the Angular engine
+    - BrowserModule, AppRoutingModule are imported by default
+
+demoapp > src > app > app.component.ts
+    - you can place component on the selector. Selector will identify component
+    - component contains business logic + presentation logic
+    - selector is a placeholder
+    - have to include component on the bootstrap 
+
+-----------------------------------------------------------

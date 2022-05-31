@@ -8,6 +8,8 @@ import { Child2Component } from './basics/child2/child2.component';
 import { ProductComponent } from './parentchildcommunication/product/product.component';
 import { ProductlistComponent } from './parentchildcommunication/productlist/productlist.component';
 import { ProductlistitemComponent } from './parentchildcommunication/productlistitem/productlistitem.component';
+import { ProductcreateComponent } from './parentchildcommunication/productcreate/productcreate.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,13 @@ import { ProductlistitemComponent } from './parentchildcommunication/productlist
     Child2Component,
     ProductComponent,
     ProductlistComponent,
-    ProductlistitemComponent
+    ProductlistitemComponent,
+    ProductcreateComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

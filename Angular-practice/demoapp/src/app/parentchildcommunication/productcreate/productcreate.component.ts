@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Product } from 'src/shared/product.module';
 
 @Component({
   selector: 'app-productcreate',
@@ -11,16 +13,20 @@ export class ProductcreateComponent implements OnInit {
   quantity:number;
   imagePath:string;
 
-  addProductFlag:boolean=false;
+  @Output() newProductAdded = new EventEmitter<Product>();
+
+  //addProductFlag:boolean=false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onAddProduct()
+  onAddProduct(productForm:NgForm)
   {
-    this.addProductFlag=true;
+    //this.addProductFlag=true;
+    let newproduct = new Product(100,productForm.value.title, productForm.value.description, productForm.value.imagePath, productForm.value.quantity);
+    this.newProductAdded.emit(newproduct);
   }
 
 }

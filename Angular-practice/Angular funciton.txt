@@ -1,0 +1,28 @@
+1. *ngIf 
+    - can be used to check condition 
+    - 
+
+2. ng-template
+    - on ngif, you can specify else, and put #commentsref there to execute ng-template 
+
+3. ngFor
+    - use for iteration
+    - can use to load dynamic number of components
+
+4. property binding
+    - send data from parent to child
+    @Input()
+    - productlist (parent) -> productlistitem(child)
+        - Child: variable in child component is able to receive the data from parent component only if it is decorated with @input() decorator
+        - Parent: in parents template through property binding data can be sent to the child component
+
+5. Send data from child to parent
+    - <app-child (nameevent)="receiveName($event)"></app-child>
+    - send the value of name into parentcomponent(chilname)
+        @Output() namevent = new EventEmitter<string>()
+
+6. Interactive forms
+    - In angularm there are 2 approaches to design the interactive forms
+        - Template driven approach
+            
+        - Reactive approach

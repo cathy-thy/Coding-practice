@@ -1,3 +1,4 @@
 <p>product works!</p>
-<app-productlist></app-productlist>
-<app-productcreate></app-productcreate>
+<app-productlist [productlist]="storedProducts"></app-productlist>
+
+<app-productcreate (newProductAdded)="onNewProductAdded($event)"></app-productcreate>

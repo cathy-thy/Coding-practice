@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control" placeholder="Title" [(ngModel)]="title">
+        </div>
+    </div>
+    <div class="row">
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <input type="text" class="form-control" placeholder="Description" [(ngModel)]="description">
+        </div>
+    </div>
+    <div class="row">
+        <div class="mb-3">
+            <label for="imagepath" class="form-label">ImageUrl</label>
+            <input type="text" class="form-control" placeholder="ImageUrl" [(ngModel)]="imagePath">
+        </div>
+    </div>
+    <div class="row">
+        <div class="mb-3">
+            <label for="quantity" class="form-label">Quantity</label>
+            <input type="number" class="form-control" placeholder="Quantity" [(ngModel)]="quantity">
+        </div>
+    </div>
+    <div class="col-auto">
+        <button class="btn btn-primary" (click)="onAddProduct()">Add Product</button>
+    </div>
+</div>
+<div *ngIf="addProductFlag==true">
+    <p>{{title}}</p>
+    <p>{{description}}</p>
+    <p>{{imagePath}}</p>
+    <p>{{quantity}}</p>
+</div>

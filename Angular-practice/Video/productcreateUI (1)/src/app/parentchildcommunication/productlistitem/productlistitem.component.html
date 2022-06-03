@@ -1,0 +1,21 @@
+            <div class="shadow-lg p-3 mb-5 bg-white rounded">
+                <div>
+                    <h4>{{product.title}}</h4>
+                </div>
+                <span class="align-middle">
+                    <img
+                     [src]="product.imagepath"
+                     alt="{{product.title}}"
+                     class="img-fluid">
+                </span>
+                <div *ngIf="product.comments.length==0; else commentsref">
+                    <p>No Comments!!!!</p>
+                </div>
+                <ng-template #commentsref>
+                   <p>Comments</p>
+                   <ul class="list-group list-group-flush">
+                       <li class="list-group-item" *ngFor="let comment of product.comments">{{comment}}</li>
+                   </ul>
+                </ng-template>
+            </div>           
+    

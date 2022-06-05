@@ -5,8 +5,7 @@ export class Employee
     public imagepath:string;
     public designation:string;
 
-    public constructor (empid:number, name:string,
-                        imagepath:string, designation:string)
+    public constructor (empid:number, name:string,imagepath:string, designation:string)
     {
         this.empid=empid;
         this.name=name;

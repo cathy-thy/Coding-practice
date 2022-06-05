@@ -10,7 +10,7 @@ export class EmployeelistitemComponent implements OnInit {
 
   
   //employee = new Employee(1,"Yamada Ryosuke","https://www.tv-asahi.co.jp/orekawa/cast/img/cast01.jpg", "Sales")
-  @Input() employee:Employee | undefined;
+  @Input() employee:Employee | undefined ;
 
   constructor() { }
 

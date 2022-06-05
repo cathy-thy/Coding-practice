@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
 import { EmployeeComponent } from './employee/employee.component';
 import { EmployeelistComponent } from './employeelist/employeelist.component';
 import { EmployeelistitemComponent } from './employeelistitem/employeelistitem.component';
@@ -17,7 +18,8 @@ import { EmployeecreateComponent } from './employeecreate/employeecreate.compone
     EmployeecreateComponent  ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

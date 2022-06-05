@@ -1,6 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
-
+.bgimg{
+    background-size:cover; width:auto;
+    background-image:url("./assets/beerbg.png");
+}
 .wrapper {
 padding: 20px 20px;
 }

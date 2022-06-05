@@ -1,7 +1,7 @@
 <div class = "container">
     <form #employeeForm="ngForm" (ngSubmit)="onAddEmployee(employeeForm)">
         <div class ="row">
-            <div class = "mb-3">
+            <div class = "mb-3 col-md-4">
                 <label for = "name" class="form-label">Name</label>
                 <input type = "text" class="form-control" placeholder="Name" name="name" ngModel required #name="ngModel">
                 <div class="input-error" *ngIf="name.touched && name.invalid">
@@ -12,7 +12,7 @@
         </div>
 
         <div class="row">
-            <div class = "mb-3">
+            <div class = "mb-3 col-md-4">
                 <label for = "imagepath" class="form-label">Imagepath</label>
                 <input type="text" class="form-control" placeholder="Imagepath" name="imagepath" ngModel required #imagepath="ngModel">
                 <div class="input-error" *ngIf="imagepath.touched && imagepath.invalid">
@@ -22,7 +22,7 @@
         </div>
 
         <div class ="row">
-            <div class = "mb-3">
+            <div class = "mb-3 col-md-4">
                 <label for = "designation" class="form-label">Designation</label>
                 <input type = "text" class="form-control" placeholder="Designation" name="designation" ngModel required #designation="ngModel">
                 <div class="input-error" *ngIf="designation.touched && designation.invalid">

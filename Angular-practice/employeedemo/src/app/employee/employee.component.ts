@@ -7,7 +7,11 @@ import { Employee } from 'src/shared/employee.module';
   styleUrls: ['./employee.component.css']
 })
 export class EmployeeComponent implements OnInit {
-  storedEmployees: Employee[]=[];
+  storedEmployees: Employee[]=[  
+    new Employee(1,"Maruya Kosuke","https://www.tv-asahi.co.jp/orekawa/cast/img/cast01.jpg", "Sales"),
+    new Employee(2,"Sanada Izumi","https://www.tv-asahi.co.jp/orekawa/cast/img/cast02.jpg", "Sales"),
+    new Employee(3,"Ichinose Kei","https://www.tv-asahi.co.jp/orekawa/cast/img/cast03.jpg", "Sales"),
+    new Employee(4,"Mysterious man","https://www.tv-asahi.co.jp/orekawa/cast/img/cast05.jpg", "Sales")];
 
   constructor() { }
 

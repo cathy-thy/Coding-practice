@@ -1,6 +1,2 @@
-<p>employee works!</p>
-
-<!-- <app-employeelist></app-employeelist> -->
-<!-- <app-employeecreate></app-employeecreate> -->
 <app-employeelist [employeelist]="storedEmployees"></app-employeelist>
 <app-employeecreate (newEmployeeAdded)="onNewEmployeeAdded($event)"></app-employeecreate>

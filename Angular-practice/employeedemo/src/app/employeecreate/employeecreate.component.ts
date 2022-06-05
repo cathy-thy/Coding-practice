@@ -8,10 +8,6 @@ import { Employee } from 'src/shared/employee.module';
   styleUrls: ['./employeecreate.component.css']
 })
 export class EmployeecreateComponent implements OnInit {
-  empid!: number;
-  name!: string;
-  imagepath!: string ;
-  designation!: string ;
 
   @Output() newEmployeeAdded = new EventEmitter<Employee>();
   
@@ -22,12 +18,10 @@ export class EmployeecreateComponent implements OnInit {
 
   }
 
-  onAddEmployee()
+  onAddEmployee(employeeForm:NgForm)
   {
-
-    //let newemployee = new Employee(5,employeeForm.value.name, employeeForm.value.imagepath, employeeForm.value.designation);
-    let newemployee = new Employee(5, this.name, this.imagepath, this.designation);
-    // console.log(newemployee)
+    console.log("enter employeecreate component ts")
+    let newemployee = new Employee(5,employeeForm.value.name, employeeForm.value.imagepath, employeeForm.value.designation);
     this.newEmployeeAdded.emit(newemployee);
   }
 }

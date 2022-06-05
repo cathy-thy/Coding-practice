@@ -24,6 +24,11 @@ font-weight: bold;
 font-size: 24px;
 }
 
+.input-error{
+ color:red;
+ font-size: 12px;    
+}
+
 @media (max-width: 800px){
     .mx-30{
         margin-bottom: 30px;

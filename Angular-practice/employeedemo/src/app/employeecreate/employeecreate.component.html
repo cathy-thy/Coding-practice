@@ -1,9 +1,12 @@
 <div class = "container">
-    <!-- <form #employeeForm="ngForm" (ngSumbit)="onAddEmployee(employeeForm)"> -->
+    <form #employeeForm="ngForm" (ngSubmit)="onAddEmployee(employeeForm)">
         <div class ="row">
             <div class = "mb-3">
                 <label for = "name" class="form-label">Name</label>
-                <input type = "text" class="form-control" placeholder="Name" [(ngModel)]="name">
+                <input type = "text" class="form-control" placeholder="Name" name="name" ngModel required #name="ngModel">
+                <div class="input-error" *ngIf="name.touched && name.invalid">
+                    Name is required
+                </div>
 
             </div>
         </div>
@@ -11,21 +14,25 @@
         <div class="row">
             <div class = "mb-3">
                 <label for = "imagepath" class="form-label">Imagepath</label>
-                <input type="te" class="form-control" placeholder="Imagepath" [(ngModel)]="imagepath">
-
+                <input type="text" class="form-control" placeholder="Imagepath" name="imagepath" ngModel required #imagepath="ngModel">
+                <div class="input-error" *ngIf="imagepath.touched && imagepath.invalid">
+                    Image path is required
+                </div>
             </div>
         </div>
 
         <div class ="row">
             <div class = "mb-3">
                 <label for = "designation" class="form-label">Designation</label>
-                <input type = "text" class="form-control" placeholder="Designation" [(ngModel)]="designation">
-
+                <input type = "text" class="form-control" placeholder="Designation" name="designation" ngModel required #designation="ngModel">
+                <div class="input-error" *ngIf="designation.touched && designation.invalid">
+                    Designation is required
+                </div>
             </div>
         </div>
 
         <div class = "col-auto">
-            <button class = "btn btn-primary" (click)="onAddEmployee()" >Add Employee</button>
+            <button class = "btn btn-primary" [disabled]="!employeeForm.form.valid">Add Employee</button>
         </div>
-    <!-- </form> -->
+    </form>
 </div>

@@ -17,8 +17,6 @@ export class EmployeelistComponent implements OnInit {
   //   new Employee(4,"Mysterious man","https://www.tv-asahi.co.jp/orekawa/cast/img/cast05.jpg", "Sales"),
   // ];
 
-  
-
   constructor() { }
 
   ngOnInit(): void {

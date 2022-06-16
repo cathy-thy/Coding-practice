@@ -15,6 +15,7 @@ import { ProductService } from 'src/shared/product.service';
 import { ProductlistComponent } from './servicecommunication/productlist/productlist.component';
 import { ProductlistitemComponent } from './servicecommunication/productlistitem/productlistitem.component';
 import { ProductcreateComponent } from './servicecommunication/productcreate/productcreate.component';
+import { OrderComponent } from './servicecommunication/order/order.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ProductcreateComponent } from './servicecommunication/productcreate/pro
     ProductComponent,
     ProductlistComponent,
     ProductlistitemComponent,
-    ProductcreateComponent
+    ProductcreateComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,

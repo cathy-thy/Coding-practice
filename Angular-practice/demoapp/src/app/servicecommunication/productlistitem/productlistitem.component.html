@@ -24,7 +24,7 @@
 </ng-template> -->
 
 <div *ngIf="product.quantity<=1">
-    <button type="submit" class = "btn btn-danger">Order Stock</button>
+    <button type="submit" class = "btn btn-danger" (click)="onOrderStock()">Order Stock</button>
 
 </div>
 </div>

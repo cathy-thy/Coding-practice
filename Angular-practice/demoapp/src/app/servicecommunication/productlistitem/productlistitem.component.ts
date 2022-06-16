@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { InventoryService } from 'src/shared/inventory.service';
 import { Product } from 'src/shared/product.module';
 
 @Component({
@@ -8,9 +9,17 @@ import { Product } from 'src/shared/product.module';
 })
 export class ProductlistitemComponent implements OnInit {
   @Input() product:Product
-  constructor() { }
+
+  //we have to pass current product into here
+  constructor(private inventoryservice:InventoryService) { }
 
   ngOnInit(): void {
+  }
+
+  
+  onOrderStock()
+  {
+    this.inventoryservice.addOrder(this.product);
   }
 
 }

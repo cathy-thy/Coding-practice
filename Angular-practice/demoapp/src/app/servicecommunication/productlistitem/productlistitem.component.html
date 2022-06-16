@@ -13,7 +13,7 @@
         class = "img-fluid">
     </span>
 
-<div *ngIf="product.comments.length==0; else commentsref">
+<!-- <div *ngIf="product.comments.length==0; else commentsref">
     <p>No Comments</p>
 </div>
 <ng-template #commentsref>
@@ -21,6 +21,11 @@
     <ul class="list-group list-group-flush">
         <li *ngFor="let comment of product.comments">{{comment}}</li>
     </ul>
-</ng-template>
+</ng-template> -->
+
+<div *ngIf="product.quantity<=1">
+    <button type="submit" class = "btn btn-danger">Order Stock</button>
+
+</div>
 </div>
 

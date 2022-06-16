@@ -12,7 +12,7 @@ export class ProductService {
   products: Product[]=[
     new Product(1,"Service Headphones", "Wireless BT 1", 
     "https://images.philips.com/is/image/PhilipsConsumer/TASH402LF_00-IMS-en_HK?wid=880&hei=530&$jpglarge$",
-    100,["Amazing","Nice"]),
+    1,["Amazing","Nice"]),
 
     new Product(2,"Service Headphones", "Wireless BT 2", 
     "https://images.philips.com/is/image/PhilipsConsumer/TASH402LF_00-IMS-en_HK?wid=880&hei=530&$jpglarge$",

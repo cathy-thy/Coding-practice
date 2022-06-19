@@ -16,6 +16,7 @@ import { ProductlistComponent } from './servicecommunication/productlist/product
 import { ProductlistitemComponent } from './servicecommunication/productlistitem/productlistitem.component';
 import { ProductcreateComponent } from './servicecommunication/productcreate/productcreate.component';
 import { OrderComponent } from './servicecommunication/order/order.component';
+import { HeaderComponent } from './servicecommunication/header/header.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { OrderComponent } from './servicecommunication/order/order.component';
     ProductlistComponent,
     ProductlistitemComponent,
     ProductcreateComponent,
-    OrderComponent
+    OrderComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

@@ -17,6 +17,9 @@ import { ProductlistitemComponent } from './servicecommunication/productlistitem
 import { ProductcreateComponent } from './servicecommunication/productcreate/productcreate.component';
 import { OrderComponent } from './servicecommunication/order/order.component';
 import { HeaderComponent } from './servicecommunication/header/header.component';
+import { InMemoryDataService } from 'src/shared/in-memory-data.service';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,9 @@ import { HeaderComponent } from './servicecommunication/header/header.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService,{dataEncapsulation:false}),
+    HttpClientModule
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]

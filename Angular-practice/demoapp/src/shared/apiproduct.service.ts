@@ -28,4 +28,14 @@ export class ApiproductService {
     const product = {title:title, description:description, imagepath:imagepath, quantity:quantity};
     return this.http.post<Product>(this.productsUrl, product);
   }
+
+  getProduct(id:number):Observable<Product>
+  {
+    return this.http.get<Product>(`${this.productsUrl}/${id}`);
+  }
+
+  updateProduct(product:Product):Observable<any>
+  {
+    return this.http.put(`${this.productsUrl}/${product.id}`, product);
+  }
 }

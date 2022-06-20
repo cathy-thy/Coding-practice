@@ -32,15 +32,18 @@
     <div class="row">
         <div class = "mb-3">
             <label for = "imagepath" class="form-label">Imagepath</label>
-            <input type="te" class="form-control" placeholder="Imagepath" name="imagePath" ngModel required #imagePath="ngModel">
+            <input type="text" class="form-control" placeholder="Imagepath" name="imagepath" ngModel required #imagepath="ngModel">
             
-            <div *ngIf="imagePath.touched && imagePath.invalid">
+            <div *ngIf="imagepath.touched && imagepath.invalid">
                 Image path is required
             </div>
         </div>
     </div>
-    <div class = "col-auto">
+    <div class = "col-auto" *ngIf="editMode==false">
         <button class = "btn btn-primary" [disabled]="!productForm.form.valid">Add Product</button>
+    </div>
+    <div class = "col-auto" *ngIf="editMode==true">
+        <button class = "btn btn-primary" [disabled]="!productForm.form.valid">Update Product</button>
     </div>
     </form>
 </div>

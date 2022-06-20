@@ -59,7 +59,8 @@ export class ProductcreateComponent implements OnInit {
               console.log(resp);
               //next is used to admit data to the subscriber
               this.apiproductservice.productlistUpdated.next(true);
-            });
+      });
+      this.router.navigate(['']);
     }
     else{
       let updatedProduct=new Product(this.id, productForm.value.title,
@@ -70,6 +71,7 @@ export class ProductcreateComponent implements OnInit {
       .subscribe((res)=>{
         this.apiproductservice.productlistUpdated.next(true);
       })
+      this.router.navigate(['']);
     }
   }
 

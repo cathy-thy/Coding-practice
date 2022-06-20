@@ -5,6 +5,11 @@ import { ProductComponent } from './servicecommunication/product/product.compone
 import { ProductcreateComponent } from './servicecommunication/productcreate/productcreate.component';
 
 const routes: Routes = [
+  {
+    path:'',
+    redirectTo:'products',
+    pathMatch:'full'
+  },
   {path:'products', 
   component:ProductComponent,
   children:[

@@ -31,4 +31,9 @@ export class InMemoryDataService implements InMemoryDbService{
     return {products:products}; //api/products
     
   }
+
+  genId(products:Product[]):number{
+    return products.length>0? Math.max(...products.map(products=>products.id))+1
+                              :1; //if no id before, then start with 1
+  }
 }

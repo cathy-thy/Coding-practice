@@ -24,9 +24,19 @@ export class ProductlistComponent implements OnInit {
     this.apiproductservice.getProducts()
     .subscribe((productlist:Product[])=>{
       this.productlist=productlist;
-    })
+    });
     
-    console.log(this.productlist);
+    // subscriber
+    this.apiproductservice.productlistUpdated.subscribe((data:boolean)=>
+    {
+      if(data){
+        this.apiproductservice.getProducts()
+        .subscribe((updatedproductlist:Product[])=>{
+          this.productlist=updatedproductlist;
+        });
+      }
+    })
+    //console.log(this.productlist);
   }
 
   onAddNewProduct()

@@ -3,7 +3,11 @@
         <div class="col-md-2" *ngFor="let productelement of productlist">
             <app-productlistitem [product]="productelement"></app-productlistitem>
         </div>
-
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <button class="btn btn-primary" (click)="onAddNewProduct()">Add New Product</button>
+        </div>
     </div>
 </div>
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ApiproductService } from 'src/shared/apiproduct.service';
 import { Product } from 'src/shared/product.module';
 import { ProductService } from 'src/shared/product.service';
@@ -13,7 +14,9 @@ export class ProductlistComponent implements OnInit {
   productlist:Product[];
   
   //constructor(private productservice:ProductService) { }
-  constructor(private apiproductservice:ApiproductService) { }
+  constructor(private apiproductservice:ApiproductService, 
+              private router:Router, 
+              private route:ActivatedRoute) { }
   ngOnInit(): void {
     //this.productlist = this.productservice.getProducts();
 
@@ -24,6 +27,11 @@ export class ProductlistComponent implements OnInit {
     })
     
     console.log(this.productlist);
+  }
+
+  onAddNewProduct()
+  {
+    this.router.navigate(['new'],{relativeTo:this.route});
   }
 }
 

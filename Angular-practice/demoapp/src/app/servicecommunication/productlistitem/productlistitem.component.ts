@@ -31,4 +31,6 @@ export class ProductlistitemComponent implements OnInit {
     this.router.navigate(['edit',this.product.id], {relativeTo:this.route});
   }
 
+
+
 }

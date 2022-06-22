@@ -16,11 +16,20 @@ export class LoginComponent implements OnInit {
   loginForm=new FormGroup({
     //two instances 
     username: new FormControl('',[Validators.required,Validators.email]),
-    password: new FormControl('',[Validators.required])
+    password: new FormControl('',[Validators.required, this.customvalidator])
   });
   
   get LoginFormControls():any{
     return this.loginForm['controls'];
+  }
+
+  //if data is valid, return null, otherwise, return key value
+  customvalidator(control:FormControl):{[key:string]:boolean}|null{
+    if(control.value.length<3)
+    {
+      return {"invalid":true}
+    }
+    return null;
   }
 
   //dependency injection

@@ -17,7 +17,14 @@
     <!-- <input type="text" class="form-control" [(ngModel)]="password"> -->
     <input type="text" class="form-control" formControlName="password">
     <div *ngIf="LoginFormControls.password.touched && LoginFormControls.password.invalid">
+        <div *ngIf="LoginFormControls.password.errors.required">
             Password is required
+        </div>
+        <div *ngIf="LoginFormControls.password.invalid">
+            Min length must be three
+        </div>
+        
+        
     </div>
 </div>
 <button type="submit" class="btn btn-primary" (click)="onLogin()">Login</button>

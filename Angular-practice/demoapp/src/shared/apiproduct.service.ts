@@ -38,4 +38,6 @@ export class ApiproductService {
   {
     return this.http.put(`${this.productsUrl}/${product.id}`, product);
   }
+
+  
 }

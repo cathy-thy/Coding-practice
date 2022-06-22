@@ -20,6 +20,8 @@ import { HeaderComponent } from './servicecommunication/header/header.component'
 import { InMemoryDataService } from 'src/shared/in-memory-data.service';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './servicecommunication/login/login.component';
+import { LogoutComponent } from './servicecommunication/logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { HttpClientModule } from '@angular/common/http';
     ProductlistitemComponent,
     ProductcreateComponent,
     OrderComponent,
-    HeaderComponent
+    HeaderComponent,
+    LoginComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

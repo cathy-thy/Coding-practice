@@ -1,9 +1,24 @@
+<div class="container" [formGroup]="loginForm">
 <div class="mb-3">
     <label for="username" class="form-label">Username/Email</label>
-    <input type="text" class="form-control" [(ngModel)]="username">
+    <!-- <input type="text" class="form-control" [(ngModel)]="username"> -->
+    <input type="text" class="form-control" formControlName="username">
+    <div *ngIf="LoginFormControls.username.touched && LoginFormControls.username.invalid">
+        <div *ngIf="LoginFormControls.username.errors.required">
+            Username is required
+        </div>
+        <div *ngIf="LoginFormControls.username.errors.email">
+            Format Incorrect
+        </div>
+    </div>
 </div>
 <div class="mb-3">
-    <label for="username" class="form-label">Password</label>
-    <input type="text" class="form-control" [(ngModel)]="password">
+    <label for="password" class="form-label">Password</label>
+    <!-- <input type="text" class="form-control" [(ngModel)]="password"> -->
+    <input type="text" class="form-control" formControlName="password">
+    <div *ngIf="LoginFormControls.password.touched && LoginFormControls.password.invalid">
+            Password is required
+    </div>
 </div>
 <button type="submit" class="btn btn-primary" (click)="onLogin()">Login</button>
+</div>

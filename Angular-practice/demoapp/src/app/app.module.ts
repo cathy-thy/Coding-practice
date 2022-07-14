@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 // import { ProductlistComponent } from './parentchildcommunication/productlist/productlist.component';
 // import { ProductlistitemComponent } from './parentchildcommunication/productlistitem/productlistitem.component';
 // import { ProductcreateComponent } from './parentchildcommunication/productcreate/productcreate.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductComponent } from './servicecommunication/product/product.component';
 import { ProductService } from 'src/shared/product.service';
 import { ProductlistComponent } from './servicecommunication/productlist/productlist.component';
@@ -45,6 +45,7 @@ import { LogoutComponent } from './servicecommunication/logout/logout.component'
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService,{dataEncapsulation:false}),
     HttpClientModule
   ],

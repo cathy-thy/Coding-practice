@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { UserregisterService } from 'src/shared/userregister.service';
 import { UserdetailsComponent } from './servicecommunication/userdetails/userdetails.component';
 import { UserregisterComponent } from './servicecommunication/userregister/userregister.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { UserregisterComponent } from './servicecommunication/userregister/userr
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [UserregisterService],
   bootstrap: [AppComponent]

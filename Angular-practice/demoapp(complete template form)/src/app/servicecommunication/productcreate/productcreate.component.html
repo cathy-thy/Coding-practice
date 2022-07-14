@@ -1,0 +1,57 @@
+<div class = "container">
+    <form #productForm="ngForm" (ngSubmit)="onAddProduct(productForm)">
+    <div class="row">
+        <div class = "mb-3">
+            <label for = "title" class="form-label">Title</label>
+            <input type="text" class="form-control" placeholder="Title" name="title" ngModel required #title="ngModel">
+            <div *ngIf="title.touched && title.invalid">
+                Title is required
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class = "mb-3">
+            <label for = "description" class="form-label">Description</label>
+            <input type="text" class="form-control" placeholder="Description" name="description" ngModel required #description="ngModel">
+            <div *ngIf="description.touched && description.invalid">
+                Description is required
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class = "mb-3">
+            <label for = "quantity" class="form-label">Quantity</label>
+            <input type="number" class="form-control" placeholder="Quantity" name="quantity" ngModel required #quantity="ngModel">
+
+            <div *ngIf="quantity.touched && quantity.invalid">
+                Quantity is required
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class = "mb-3">
+            <label for = "imagepath" class="form-label">Imagepath</label>
+            <input type="text" class="form-control" placeholder="Imagepath" name="imagepath" ngModel required #imagepath="ngModel">
+            
+            <div *ngIf="imagepath.touched && imagepath.invalid">
+                Image path is required
+            </div>
+        </div>
+    </div>
+    <div class = "col-auto" *ngIf="editMode==false">
+        <button class = "btn btn-primary" [disabled]="!productForm.form.valid">Add Product</button>
+    </div>
+    <div class = "col-auto" *ngIf="editMode==true">
+        <button class = "btn btn-primary" [disabled]="!productForm.form.valid">Update Product</button>
+    </div>
+    </form>
+</div>
+
+<!-- <div *ngIf="addProductFlag==true">
+    <p>{{title}}</p>
+    <p>{{description}}</p>
+    <p>{{imagePath}}</p>
+    <p>{{quantity}}</p>
+</div> -->
+
